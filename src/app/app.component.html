@@ -3,3 +3,30 @@
 
 
 <button (click)="test()">Click</button>
+
+
+<div *ngFor="let data of datas">
+
+
+
+</div>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Code postal</th>
+        <th>Ville</th>
+        <th>Libelle</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let data of datas">
+        <td>{{ data.fields.code_postal }}</td>
+        <td>{{ data.fields.ville }}</td>
+        <td>{{ data.fields.tco_libelle }}</td>
+
+    </tr>
+    </tbody>
+
+</table>

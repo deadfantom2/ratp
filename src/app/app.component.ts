@@ -9,16 +9,21 @@ import { RatpService } from "./services/ratp.service";
 export class AppComponent implements OnInit{
   title = 'app';
 
+  datas:any;
+
   constructor( private ratp: RatpService ) { }
 
 
   ngOnInit() {
-
+    this.test()
   }
 
 
   test(){
-    this.ratp.getDatas().subscribe(res => res);
+    this.datas = this.ratp.getDatas().subscribe(res => {
+      this.datas = res
+      console.log(this.datas)
+    });
   }
 
 
